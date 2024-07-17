@@ -1,4 +1,11 @@
 "use strict";
-const a = 12;
-const b = 34;
-console.log(a + b);
+// Primitives - Number String Boolean Any
+let age;
+age = 12;
+let username = "John Doe";
+let isValid = true;
+// console.log(username, age, isValid);
+let id = 1223;
+id = "hjdj";
+console.log(id);
+// let varname:datatype = value
