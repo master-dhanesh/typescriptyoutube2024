@@ -1,17 +1,22 @@
-// Array
-// Tuples -> restrics the length and the index value of an array
+// Enums
 
-let user1 = ["John", 23, true];
-let users: string[] = ["John", "Hitesh", "Pradeep"];
-let marks: Array<number> = [12, 344, 767, 446]; // number[]
-let ids: (string | number)[] = [12, "as4uij", "sdujd", 348];
-// console.log(ids);
+// let PI: 3.14 = 3.14;
+enum Direction {
+    Up,
+    Down,
+    Left,
+    Right,
+}
 
-type DetailType = [string, number, string];
-let detail1: [string, number, string] = ["john", 23, "bhopal"];
-let detail2: DetailType = ["john", 23, "bhopal"];
+enum city {
+    bpl = "Bhopal",
+    ind = "indore",
+    gw = "gwalior",
+}
 
-detail1.push(45);
+enum random {
+    value = "qw",
+    age = 34,
+}
 
-console.log(detail1);
-console.log(detail2);
+console.log(random.age);
