@@ -1,32 +1,17 @@
-// readonly
-// optional ?
-// union type |
-// Literal Type
+// Array
+// Tuples -> restrics the length and the index value of an array
 
-type ProductType = {
-    readonly id: string | number;
-    name: string;
-    price: number;
-    brand: string;
-    discount?: number;
-};
+let user1 = ["John", 23, true];
+let users: string[] = ["John", "Hitesh", "Pradeep"];
+let marks: Array<number> = [12, 344, 767, 446]; // number[]
+let ids: (string | number)[] = [12, "as4uij", "sdujd", 348];
+// console.log(ids);
 
-let Product1: ProductType = {
-    id: "12",
-    name: "Mouse",
-    price: 2000,
-    brand: "logitech",
-    discount: 56,
-};
+type DetailType = [string, number, string];
+let detail1: [string, number, string] = ["john", 23, "bhopal"];
+let detail2: DetailType = ["john", 23, "bhopal"];
 
-// Product1.id = 845;
+detail1.push(45);
 
-// console.log(Product1);
-
-// const Pi = 3.14
-// Pi = 84
-
-let PI: 3.14 = 3.14;
-PI = 3.14;
-
-console.log(PI);
+console.log(detail1);
+console.log(detail2);
