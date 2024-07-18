@@ -1,30 +1,44 @@
-// Function
-// Parameter Types
-// Return Types (void and Never)
+// Objects
+// Type Aliases
+// Combine Type Aliases
 
-// function greet() {
-//     // console.log("hello");
-//     return "hello";
-// }
-// let x = greet();
-// console.log(x);
+type ID = number;
+let uid: ID = 123;
+let nanoid: ID = 123;
+let a: string = "45";
 
-// function dets(username: string, age: number): string {
-//     console.log(username, age);
-//     return "ok";
-// }
+type ProfileType = { name: string; age: number; address: string };
 
-// let x: string = dets("john", 12);
-// console.log(x);
+const Profile1: ProfileType = {
+    name: "John",
+    age: 12,
+    address: "Delhi",
+};
 
-// function dbStore(port: number, host: string): void {
-//     console.log(port, host, "Saved in Database");
-// }
+const Profile2: ProfileType = {
+    name: "John",
+    age: 12,
+    address: "Delhi",
+};
 
-// dbStore(3000, "locahost");
+// console.log(Profile1);
+// console.log(Profile2);
 
-function errorHandler(msg: string): never {
-    // ksdjfo
-    throw new Error(msg);
-}
-errorHandler("kuch bhi error ");
+const createProfile = (user: ProfileType): void => {
+    console.log("user saved in the database");
+};
+createProfile({ name: "pradeep", age: 12, address: "indore" });
+
+type UserType = ProfileType & {
+    isAdmin: boolean;
+    status: string;
+};
+
+const User1: UserType = {
+    name: "Harsh Sen",
+    age: 20,
+    address: "bhopal",
+    isAdmin: true,
+    status: "single",
+};
+console.log(User1);
