@@ -1,44 +1,32 @@
-// Objects
-// Type Aliases
-// Combine Type Aliases
+// readonly
+// optional ?
+// union type |
+// Literal Type
 
-type ID = number;
-let uid: ID = 123;
-let nanoid: ID = 123;
-let a: string = "45";
-
-type ProfileType = { name: string; age: number; address: string };
-
-const Profile1: ProfileType = {
-    name: "John",
-    age: 12,
-    address: "Delhi",
+type ProductType = {
+    readonly id: string | number;
+    name: string;
+    price: number;
+    brand: string;
+    discount?: number;
 };
 
-const Profile2: ProfileType = {
-    name: "John",
-    age: 12,
-    address: "Delhi",
+let Product1: ProductType = {
+    id: "12",
+    name: "Mouse",
+    price: 2000,
+    brand: "logitech",
+    discount: 56,
 };
 
-// console.log(Profile1);
-// console.log(Profile2);
+// Product1.id = 845;
 
-const createProfile = (user: ProfileType): void => {
-    console.log("user saved in the database");
-};
-createProfile({ name: "pradeep", age: 12, address: "indore" });
+// console.log(Product1);
 
-type UserType = ProfileType & {
-    isAdmin: boolean;
-    status: string;
-};
+// const Pi = 3.14
+// Pi = 84
 
-const User1: UserType = {
-    name: "Harsh Sen",
-    age: 20,
-    address: "bhopal",
-    isAdmin: true,
-    status: "single",
-};
-console.log(User1);
+let PI: 3.14 = 3.14;
+PI = 3.14;
+
+console.log(PI);

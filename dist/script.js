@@ -1,31 +1,19 @@
 "use strict";
-// Objects
-// Type Aliases
-// Combine Type Aliases
-let uid = 123;
-let nanoid = 123;
-let a = "45";
-const Profile1 = {
-    name: "John",
-    age: 12,
-    address: "Delhi",
+// readonly
+// optional ?
+// union type |
+// Literal Type
+let Product1 = {
+    id: "12",
+    name: "Mouse",
+    price: 2000,
+    brand: "logitech",
+    discount: 56,
 };
-const Profile2 = {
-    name: "John",
-    age: 12,
-    address: "Delhi",
-};
-// console.log(Profile1);
-// console.log(Profile2);
-const createProfile = (user) => {
-    console.log("user saved in the database");
-};
-createProfile({ name: "pradeep", age: 12, address: "indore" });
-const User1 = {
-    name: "Harsh Sen",
-    age: 20,
-    address: "bhopal",
-    isAdmin: true,
-    status: "single",
-};
-console.log(User1);
+// Product1.id = 845;
+// console.log(Product1);
+// const Pi = 3.14
+// Pi = 84
+let PI = 3.14;
+PI = 3.14;
+console.log(PI);
