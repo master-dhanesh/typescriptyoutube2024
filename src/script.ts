@@ -1,13 +1,30 @@
-// Primitives - Number String Boolean Any
+// Function
+// Parameter Types
+// Return Types (void and Never)
 
-let age: number;
-age = 12;
-let username: string = "John Doe";
-let isValid: boolean = true;
-// console.log(username, age, isValid);
+// function greet() {
+//     // console.log("hello");
+//     return "hello";
+// }
+// let x = greet();
+// console.log(x);
 
-let id: any = 1223;
-id = "hjdj";
-console.log(id);
+// function dets(username: string, age: number): string {
+//     console.log(username, age);
+//     return "ok";
+// }
 
-// let varname:datatype = value
+// let x: string = dets("john", 12);
+// console.log(x);
+
+// function dbStore(port: number, host: string): void {
+//     console.log(port, host, "Saved in Database");
+// }
+
+// dbStore(3000, "locahost");
+
+function errorHandler(msg: string): never {
+    // ksdjfo
+    throw new Error(msg);
+}
+errorHandler("kuch bhi error ");
