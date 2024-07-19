@@ -1,22 +1,23 @@
 "use strict";
-// Enums
-// let PI: 3.14 = 3.14;
-var Direction;
-(function (Direction) {
-    Direction[Direction["Up"] = 0] = "Up";
-    Direction[Direction["Down"] = 1] = "Down";
-    Direction[Direction["Left"] = 2] = "Left";
-    Direction[Direction["Right"] = 3] = "Right";
-})(Direction || (Direction = {}));
-var city;
-(function (city) {
-    city["bpl"] = "Bhopal";
-    city["ind"] = "indore";
-    city["gw"] = "gwalior";
-})(city || (city = {}));
-var random;
-(function (random) {
-    random["value"] = "qw";
-    random[random["age"] = 34] = "age";
-})(random || (random = {}));
-console.log(random.age);
+// Interface
+// Types and Interface
+const p1 = {
+    name: "Pixel 4a",
+    brand: "Google",
+    price: 28000,
+    dets: () => "product Details",
+    stock: 12,
+    review: "any review",
+};
+console.log(p1);
+const p2 = {
+    id: 173,
+    name: "Pixel 4a",
+    brand: "Google",
+    price: 28000,
+    dets: () => "product Details",
+    stock: 12,
+    review: "any review",
+    discount: 34,
+};
+console.log(p2);
