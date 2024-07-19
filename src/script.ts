@@ -1,41 +1,36 @@
-// Interface
-// Types and Interface
+// Narrowing
+// type guard - typeof
+// in operator
+// instanceOf
 
-interface Product {
-    name: string;
-    brand: string;
-    price: number;
-    dets: () => string;
+function getValue(x: number | string): void {
+    if (typeof x == "number") {
+        console.log(x.toFixed(2));
+    } else if (typeof x == "string") {
+        console.log(x.toUpperCase());
+    }
+}
+// getValue(12.3545);
+// getValue("hello");
+
+type Male = { nobirth: string };
+type Female = { birth: string };
+function human(person: Male | Female): void {
+    if ("birth" in person) {
+        console.log("Person is female");
+    } else if ("nobirth" in person) {
+        console.log("Person is male");
+    }
+}
+// human({ nobirth: "" });
+
+function getData(x: Date | string): void {
+    if (x instanceof Date) {
+        console.log(x.toLocaleDateString());
+    } else {
+        console.log(x.toUpperCase());
+    }
 }
 
-interface Product {
-    stock: number;
-    review: string;
-}
-
-const p1: Product = {
-    name: "Pixel 4a",
-    brand: "Google",
-    price: 28000,
-    dets: () => "product Details",
-    stock: 12,
-    review: "any review",
-};
-console.log(p1);
-
-interface ProductDetails extends Product {
-    readonly id: number | string;
-    discount?: number;
-}
-
-const p2: ProductDetails = {
-    id: 173,
-    name: "Pixel 4a",
-    brand: "Google",
-    price: 28000,
-    dets: () => "product Details",
-    stock: 12,
-    review: "any review",
-    discount: 34,
-};
-console.log(p2);
+getData(new Date());
+getData("Hello People");
